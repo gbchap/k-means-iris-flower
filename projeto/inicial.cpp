@@ -5,39 +5,34 @@ using namespace std;
 #define M 2
 
 void k_means(double x[][M], int k){
-    //Utilizando o exemplo abaixo, 
-    //e 2 = k, vamos definir 2 clusters, 
-    //escolhendo o primeiro e o último
-    //ponto como centróides iniciais.
-
-    //se k for maior que 2, vamos escolher
-    //o número de centróides separadamente.
-
-    cout << "Centróides iniciais escolhidos: " << endl;
+    //Primeiramente, vamos definir k clusters de maneira
+    //aleatória. Para isso, criaremos um algoritmo que possa
+    //espaçar essa definição de acordo com a ordem
+    //das informações.
 
     //array de clusters:
     float cluster[k];
-    cluster[0] = x[0][0];
 
-    if (k >= 2){
-        cluster[k-1] = x[N-1][M-1];
-    }
-    if(k>2){
-        if (k % 0 != 2){
-            for(int i=0; i<k; i++){
-                
+    if (N % 0 != 2){
+        for(int i=0; i<k; i++){
+        
+        }
+
+    }else{
+        int p = N/k;
+        //o número p que vamos pular na definição das
+        //clusters é definido por N/k, garantindo
+        //um espaçamento igual, começando do primeiro ponto.
+        for(int i=0; i<k-1; i++){
+            for(int j=0; j<N-1; j+=p){
+                cluster[i] = x[j][M];
             }
-
-
-        }else{
-
         }
     }
 
-
     //agora veremos a proximidade de cada um
     //dos outros pontos em relação a cada centróide.
-
+    //Assim, vamos atribuir o ponto ao centróide mais próximo.
 }
 
 int main()
