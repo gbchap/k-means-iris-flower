@@ -1,0 +1,74 @@
+Projeto: Implementação do Algoritmo K-Means em C++
+
+Implemente o algoritmo k-means em C++, utilizando apenas as bibliotecas previamente 
+apresentadas em aula.
+
+------------------------------------------------------------------------------
+
+Descrição do Algoritmo  
+O k-means é um algoritmo de aprendizado não supervisionado que separa um conjunto de dados em 
+k grupos. Esse processo é realizado de forma iterativa, seguindo os passos principais:
+
+1. Inicialização dos centros dos grupos (clusters):  
+   - As posições podem ser escolhidas de diversas maneiras, como seleção aleatória de 
+   pontos do conjunto de dados ou estratégias mais avançadas.
+
+2. Atribuição de cada ponto de dados ao cluster mais próximo:  
+   - Utilizando uma métrica de distância (como distância Euclidiana).
+
+3. Atualização das posições dos centros dos clusters:  
+   - Calculando a média dos pontos atribuídos a cada cluster.
+
+4. Repetição dos passos 2 e 3 até que um critério de parada seja atingido:  
+   - Pode ser um número máximo de iterações ou quando os centros dos clusters não 
+   mudarem significativamente entre iterações.
+
+------------------------------------------------------------------------------
+
+Requisitos do Trabalho  
+- Implementar um código em C++ que:
+  - Leia um conjunto de dados de um arquivo .txt.
+  - Agrupe os dados em k grupos, onde k e o número máximo de iterações são parâmetros 
+  informados pelo usuário (use 100 iterações como padrão).
+
+- Avaliação prática utilizando o conjunto de dados da íris:  
+  - Disponível em: https://archive.ics.uci.edu/dataset/53/iris  
+  - Execute o algoritmo para:  
+    - Todos os pares de variáveis possíveis entre as 4 disponíveis (6 combinações).  
+    - Todas as 4 variáveis simultaneamente.  
+
+------------------------------------------------------------------------------
+
+Critérios de Avaliação  
+1. Leitura do arquivo:  
+   - O código deve ser capaz de abrir e processar corretamente o arquivo .txt contendo 
+   os dados.
+
+2. Organização e otimização do código:  
+   - Implementação deve seguir boas práticas de programação, como modularidade, clareza e 
+   eficiência.
+
+3. Comentários no código:  
+   - Adicione comentários explicativos detalhando o funcionamento de cada parte 
+   do algoritmo.
+
+4. Escolha de hiperparâmetros e métrica de distância:  
+   - Documente e justifique a escolha da métrica de distância e os critérios para a 
+   inicialização dos clusters.
+
+5. Análise dos resultados:  
+   - Inclua uma análise dos agrupamentos gerados no conjunto de dados da íris.
+   - Compare os agrupamentos com as classes reais (embora o k-means seja não supervisionado) 
+   e discuta os resultados, indicando possíveis limitações do modelo.
+
+------------------------------------------------------------------------------
+
+Entrega  
+Submeta um arquivo compactado contendo:  
+1. Código-fonte em C++  
+2. Arquivo .txt usado para testes (caso seja diferente do conjunto de dados da íris).  
+3. Relatório em PDF contendo:  
+   - Justificativas para as escolhas realizadas.  
+   - Resultados obtidos (incluindo gráficos, se possível).  
+   - Discussão crítica sobre o desempenho do algoritmo.
+Código inicial: https://onlinegdb.com/mb8YNmzA4
