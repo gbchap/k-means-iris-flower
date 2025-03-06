@@ -102,7 +102,7 @@ void k_means(double x[][M]){
     //como passo 3 a função atualizarCentroides.
 
     float dist[N][k];
-    int att[k];
+    int att[N];
 
     for(int iter = 0; iter < 1000; iter++){
         atribuicao(dist, att, x, cluster);
